@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>500 Words A Day</title>
-	<script src="js/count_script.js"></script>
+	
 	<style>
 		main {
 			max-width: 960px;
@@ -15,7 +15,14 @@
 		}
 		textarea {
 			width: 100%;
-			height: 80vh;
+			height: 50vh;
+			outline: none;
+		}
+		textarea::selection {
+			color: #FFF;
+		}
+		::selection {
+			background: green; /* WebKit/Blink Browsers */
 		}
 	</style>
 </head>
@@ -26,7 +33,8 @@
 			Words: <span id="wordCount"></span><br/>
 		</div>
 		<textarea id="text" name="text" placeholder="begin typing here"></textarea>
-		<button>Save</button>
+		<button id="copy">Copy All</button>
 	</main>
+	<script src="js/count_script.js"></script>
 </body>
 </html>
